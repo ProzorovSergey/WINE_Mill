@@ -1,0 +1,16 @@
+{
+  "name": "wine-mill",
+  "version": "1.0.0",
+  "description": "Винная мельница — интернет-магазин вина и крепких напитков",
+  "scripts": {
+    "build": "sass scss/style.scss css/style.css --style=compressed --no-source-map",
+    "watch": "sass --watch scss/style.scss:css/style.css",
+    "build:expanded": "sass scss/style.scss css/style.expanded.css --style=expanded --no-source-map",
+    "lint:scss": "stylelint \"scss/**/*.scss\""
+  },
+  "devDependencies": {
+    "sass": "^1.70.0"
+  },
+  "keywords": ["wine", "e-commerce", "scss", "bem"],
+  "license": "MIT"
+}

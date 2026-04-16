@@ -1,0 +1,155 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+// =============================================
+// ARTICLES PAGE
+// =============================================
+.articles-page {
+  &__hero { position: relative; height: 16rem; overflow: hidden; background: $color-surface; @include mobile { height: 11rem; } }
+  &__hero-img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.35); }
+  &__hero-content { position: absolute; inset: 0; @include flex-col; justify-content: center; padding: $sp-2xl; @include mobile { padding: $sp-lg; } }
+  &__hero-title { @include heading($font-size-3xl); margin-bottom: 0.5rem; @include mobile { font-size: $font-size-2xl; } }
+  &__hero-sub { font-size: $font-size-md; color: rgba($color-white,.6); }
+}
+
+.article-grid {
+  @include container;
+  display: grid; grid-template-columns: repeat(2,1fr);
+  gap: 0;
+  background: $color-border; border: 1px solid $color-border;
+  margin-top: $sp-2xl; margin-bottom: $sp-2xl;
+  @include mobile { grid-template-columns: 1fr; margin-top: $sp-lg; margin-bottom: $sp-lg; }
+}
+
+.article-card {
+  background: $color-card; @include flex-col; overflow: hidden;
+  transition: background $t-base;
+  &:hover { background: $color-card-hover; .article-card__img { transform: scale(1.04); } }
+
+  &__img-wrap { aspect-ratio: 16/9; overflow: hidden; position: relative; }
+  &__img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+  &__tag { position: absolute; top: 0.75rem; left: 0.75rem; background: $color-red; color: $color-white; font-size: 0.5625rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.25rem 0.625rem; }
+
+  &__body { padding: $sp-lg; @include flex-col; gap: 0.5rem; flex: 1; }
+  &__category { @include label-caps; color: $color-red; font-size: 0.625rem; }
+  &__title { font-family: $font-display; font-size: $font-size-xl; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: $color-white; line-height: 1.25; @include mobile { font-size: $font-size-lg; } }
+  &__cta { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: auto; padding-top: $sp-md; font-size: $font-size-xs; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: $color-text-muted; transition: color $t-fast, gap $t-base; &::after { content: ''; display: block; width: 1.5rem; height: 1px; background: currentColor; transition: width $t-base; } }
+  &:hover &__cta { color: $color-white; gap: 0.75rem; &::after { width: 2.5rem; } }
+}
+
+// =============================================
+// SINGLE ARTICLE
+// =============================================
+.article-page {
+  &__layout { @include container; display: grid; grid-template-columns: 1fr 17rem; gap: $sp-2xl; padding-top: $sp-xl; padding-bottom: $sp-3xl; @include tablet { grid-template-columns: 1fr 13rem; gap: $sp-lg; } @include mobile { grid-template-columns: 1fr; } }
+  &__content { min-width: 0; }
+  &__category { @include label-caps; color: $color-red; margin-bottom: 0.75rem; display: block; }
+  &__title { font-family: $font-display; font-size: $font-size-3xl; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; line-height: 1.2; margin-bottom: $sp-xl; @include mobile { font-size: $font-size-2xl; } }
+  &__hero-img { width: 100%; aspect-ratio: 16/7; object-fit: cover; margin-bottom: $sp-xl; @include mobile { aspect-ratio: 4/3; } }
+  &__body {
+    font-size: $font-size-md; color: rgba($color-white,.72); line-height: 1.9;
+    p { margin-bottom: $sp-lg; }
+    h2 { font-family: $font-display; font-size: $font-size-2xl; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: $color-white; margin: $sp-2xl 0 $sp-md; @include mobile { font-size: $font-size-xl; } }
+    h3 { font-family: $font-display; font-size: $font-size-xl; font-weight: 700; color: $color-white; margin: $sp-xl 0 $sp-sm; }
+    img { width: 100%; aspect-ratio: 16/9; object-fit: cover; margin: $sp-xl 0; }
+    blockquote { border-left: 3px solid $color-red; padding-left: $sp-lg; margin: $sp-xl 0; color: rgba($color-white,.55); font-style: italic; }
+  }
+
+  &__sidebar { @include mobile { display: none; } }
+  &__sidebar-title { @include label-caps; color: $color-text-muted; margin-bottom: $sp-md; padding-bottom: 0.625rem; border-bottom: 1px solid $color-border; }
+  &__sidebar-list { @include flex-col; gap: 0.75rem; }
+  &__sidebar-item { display: flex; gap: 0.75rem; text-decoration: none; &:hover .article-page__sidebar-name { color: $color-white; } }
+  &__sidebar-img { width: 4.5rem; height: 3rem; object-fit: cover; flex-shrink: 0; }
+  &__sidebar-name { font-size: $font-size-sm; font-weight: 600; color: $color-text-muted; line-height: 1.4; transition: color $t-fast; }
+  &__sidebar-cat { font-size: 0.5625rem; color: $color-red; @include label-caps; font-size: 0.5625rem; margin-top: 0.2rem; }
+}
+
+// =============================================
+// ABOUT PAGE
+// =============================================
+.about-page {
+  &__intro { @include container; display: grid; grid-template-columns: 1fr 1fr; gap: $sp-2xl; padding-top: $sp-xl; padding-bottom: $sp-xl; @include mobile { grid-template-columns: 1fr; } }
+  &__intro-text { font-size: $font-size-md; color: $color-text-muted; line-height: 1.85; p + p { margin-top: $sp-md; } }
+  &__intro-img { width: 100%; height: 22rem; object-fit: cover; @include mobile { height: 14rem; } }
+
+  &__section { @include container; padding-top: $sp-xl; padding-bottom: $sp-xl; border-top: 1px solid $color-border; }
+  &__section-title { @include heading($font-size-2xl); margin-bottom: $sp-xl; &::after { content: ''; display: block; width: 3rem; height: 2px; background: $color-red; margin-top: 0.75rem; } }
+
+  &__photo-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: $sp-sm; @include mobile { grid-template-columns: 1fr 1fr; } }
+  &__photo { width: 100%; aspect-ratio: 3/2; object-fit: cover; }
+
+  &__promo-cols { display: grid; grid-template-columns: repeat(3,1fr); border: 1px solid $color-border; @include mobile { grid-template-columns: 1fr; } }
+  &__promo-col { position: relative; overflow: hidden; min-height: 13rem; @include flex-center; &:not(:last-child) { border-right: 1px solid $color-border; @include mobile { border-right: none; border-bottom: 1px solid $color-border; } } &:hover .about-page__promo-bg { transform: scale(1.05); } }
+  &__promo-bg { position: absolute; inset: 0; background-size: cover; background-position: center; filter: brightness(0.28); transition: transform 0.5s ease; }
+  &__promo-label { position: relative; z-index: 1; text-align: center; padding: $sp-lg; }
+  &__promo-title { @include heading($font-size-lg); }
+
+  &__contact-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: $sp-xl; @include mobile { grid-template-columns: 1fr; gap: $sp-md; } }
+  &__contact-item { @include flex-col; gap: 0.375rem; }
+  &__contact-label { @include label-caps; color: $color-text-dim; }
+  &__contact-value { font-size: $font-size-md; font-weight: 600; color: $color-white; }
+
+  &__contact-form { background: $color-surface; border: 1px solid $color-border; padding: $sp-xl; @include mobile { padding: $sp-lg; } }
+  &__contact-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: $sp-md; margin-bottom: $sp-md; @include mobile { grid-template-columns: 1fr; } }
+  &__field { @include flex-col; gap: 0.375rem; }
+  &__field-label { @include label-caps; font-size: 0.625rem; color: $color-text-dim; }
+  &__field-input, &__field-textarea { background: $color-bg; border: 1px solid $color-border; color: $color-white; font-size: $font-size-sm; padding: 0.625rem 0.875rem; font-family: $font-body; &::placeholder { color: $color-text-dim; } &:focus { outline: none; border-color: $color-red; } }
+  &__field-textarea { resize: vertical; min-height: 7rem; }
+  &__form-submit { @include btn-primary; padding: 0.6875rem 2rem; font-size: $font-size-xs; letter-spacing: 0.12em; margin-top: $sp-sm; }
+}
+
+// =============================================
+// CART PAGE
+// =============================================
+.cart-page {
+  @include container;
+  padding-top: $sp-xl;
+  padding-bottom: $sp-3xl;
+  &__title { @include heading($font-size-2xl); margin-bottom: $sp-xl; }
+  &__layout { display: grid; grid-template-columns: 1fr 21rem; gap: $sp-xl; @include mobile { grid-template-columns: 1fr; } }
+}
+
+.cart-table {
+  width: 100%; border-collapse: collapse; border: 1px solid $color-border;
+  &__head { background: $color-surface; }
+  &__th { @include label-caps; font-size: 0.5625rem; padding: 0.75rem $sp-md; text-align: left; border-bottom: 1px solid $color-border; &:last-child { text-align: right; } }
+  &__row { border-bottom: 1px solid $color-border; transition: background $t-fast; &:last-child { border-bottom: none; } &:hover { background: $color-card; } }
+  &__td { padding: $sp-md; vertical-align: middle; &:last-child { text-align: right; } }
+  &__product { display: flex; align-items: center; gap: $sp-md; }
+  &__product-img { width: 3rem; height: 5rem; object-fit: contain; flex-shrink: 0; background: $color-card; }
+  &__product-info { @include flex-col; gap: 0.25rem; }
+  &__product-name { font-family: $font-display; font-size: $font-size-md; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: $color-white; line-height: 1.2; &:hover { color: $color-red; } }
+  &__product-code { font-size: $font-size-xs; color: $color-text-dim; }
+  &__price, &__total-price { font-size: $font-size-md; font-weight: 700; color: $color-white; white-space: nowrap; }
+  &__remove { background: none; border: none; color: $color-text-dim; cursor: pointer; font-size: $font-size-lg; line-height: 1; transition: color $t-fast; &:hover { color: $color-red; } }
+}
+
+.cart-summary {
+  background: $color-surface; border: 1px solid $color-border; padding: $sp-lg;
+  position: sticky; top: 5.5rem; align-self: start;
+  @include mobile { position: static; }
+  &__title { @include heading($font-size-lg); margin-bottom: $sp-lg; padding-bottom: $sp-md; border-bottom: 1px solid $color-border; }
+  &__row { display: flex; justify-content: space-between; align-items: center; padding: 0.5rem 0; font-size: $font-size-sm; &--total { font-weight: 700; font-size: $font-size-lg; border-top: 1px solid $color-border; margin-top: 0.5rem; padding-top: $sp-md; } }
+  &__row-label { color: $color-text-muted; }
+  &__row-value { color: $color-white; font-weight: 600; }
+  &__checkout-btn { @include btn-primary; width: 100%; margin-top: $sp-lg; padding: 0.875rem; font-size: $font-size-xs; letter-spacing: 0.12em; justify-content: center; }
+}
+
+// =============================================
+// 404 PAGE
+// =============================================
+.error-page {
+  position: relative; overflow: hidden;
+  min-height: 60vh;
+  @include flex-center; flex-direction: column; text-align: center;
+  padding: $sp-3xl $sp-lg;
+  &__bg { position: absolute; inset: 0; background-size: cover; background-position: center; filter: brightness(0.18); z-index: 0; }
+  &__content { position: relative; z-index: 1; @include flex-col; align-items: center; gap: $sp-md; }
+  &__eyebrow { font-family: $font-script; font-size: 2.5rem; color: rgba($color-white,.55); line-height: 1; }
+  &__code    { font-family: $font-display; font-size: 1.5rem; font-weight: 700; letter-spacing: 0.3em; color: rgba($color-white,.2); text-transform: uppercase; }
+  &__title   { @include heading(2.5rem); max-width: 28rem; @include mobile { font-size: $font-size-2xl; } }
+  &__sub     { font-size: $font-size-md; color: $color-text-muted; max-width: 22rem; }
+  &__arrow   { font-size: 1.5rem; color: $color-text-dim; animation: bounce 1.5s ease infinite; }
+  &__link    { @include btn-primary; padding: 0.6875rem 2rem; font-size: $font-size-xs; letter-spacing: 0.12em; }
+  @keyframes bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(0.5rem); } }
+}

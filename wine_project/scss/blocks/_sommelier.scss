@@ -1,0 +1,53 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+// =============================================
+// SOMMELIER BANNER
+// =============================================
+.sommelier-banner {
+  background: $color-crimson-dark;
+
+  &__grid { @include container; display: grid; grid-template-columns: 1fr 1fr; min-height: 22rem; @include mobile { grid-template-columns: 1fr; } }
+
+  &__photo-col { position: relative; overflow: hidden; min-height: 18rem; @include mobile { min-height: 13rem; } }
+  &__photo { position: absolute; bottom: 0; left: 0; width: 100%; height: 110%; object-fit: cover; object-position: top center; }
+
+  &__content {
+    background: $color-crimson;
+    padding: $sp-2xl $sp-xl;
+    @include flex-col; justify-content: center;
+    position: relative; overflow: hidden;
+    @include mobile { padding: $sp-xl $sp-lg; }
+    &::before { content: ''; position: absolute; top: -7rem; right: -7rem; width: 22rem; height: 22rem; border-radius: 50%; border: 1px solid rgba($color-white,.07); pointer-events: none; }
+  }
+
+  &__eyebrow { font-family: $font-script; font-size: 2rem; color: rgba($color-white,.8); margin-bottom: 0.5rem; line-height: 1; @include mobile { font-size: 1.625rem; } }
+  &__title   { @include heading($font-size-3xl); margin-bottom: $sp-lg; @include mobile { font-size: $font-size-2xl; } }
+  &__cta     { @include btn-outline; align-self: flex-start; font-size: $font-size-xs; letter-spacing: 0.14em; }
+}
+
+// =============================================
+// SOMMELIER TEXT (2-col below banner)
+// =============================================
+.sommelier-text {
+  border-top: 1px solid $color-border;
+  &__grid { @include container; display: grid; grid-template-columns: 1fr 1fr; gap: $sp-2xl; padding-top: $sp-xl; padding-bottom: $sp-xl; @include mobile { grid-template-columns: 1fr; gap: $sp-lg; padding-top: $sp-lg; padding-bottom: $sp-lg; } }
+  &__col { font-size: $font-size-sm; color: $color-text-muted; line-height: 1.85; p + p { margin-top: $sp-md; } }
+  &__link { display: block; margin-top: $sp-md; font-size: $font-size-xs; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: $color-white; border-bottom: 1px solid $color-border-light; padding-bottom: 0.375rem; width: fit-content; transition: color $t-fast, border-color $t-fast; &:hover { color: $color-red; border-color: $color-red; } }
+}
+
+// =============================================
+// NEWSLETTER
+// =============================================
+.newsletter {
+  background: $color-surface;
+  border-top: 1px solid $color-border;
+  &__inner { @include container; display: grid; grid-template-columns: 1fr 1fr; min-height: 16rem; @include mobile { grid-template-columns: 1fr; } }
+  &__form-col { padding: $sp-2xl 0; padding-right: $sp-2xl; border-right: 1px solid $color-border; @include mobile { border-right: none; border-bottom: 1px solid $color-border; padding: $sp-xl 0; } }
+  &__label   { @include label-caps; display: block; color: $color-text-muted; margin-bottom: 0.875rem; }
+  &__form    { display: flex; max-width: 22rem; }
+  &__input   { flex: 1; height: 2.5rem; background: $color-bg; border: 1px solid $color-border-light; border-right: none; color: $color-white; font-size: $font-size-sm; padding: 0 0.875rem; &::placeholder { color: $color-text-dim; } &:focus { outline: none; border-color: $color-red; } }
+  &__submit  { @include btn-primary; height: 2.5rem; padding: 0 1.25rem; font-size: $font-size-xs; letter-spacing: 0.12em; flex-shrink: 0; }
+  &__photo-col { position: relative; overflow: hidden; min-height: 16rem; @include mobile { min-height: 11rem; } }
+  &__photo   { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.55); }
+}

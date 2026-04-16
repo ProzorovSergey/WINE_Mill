@@ -1,0 +1,46 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.product-page {
+  &__layout { @include container; display: grid; grid-template-columns: 20rem 1fr; gap: $sp-2xl; padding-top: $sp-xl; padding-bottom: $sp-2xl; @include tablet { grid-template-columns: 15rem 1fr; gap: $sp-lg; } @include mobile { grid-template-columns: 1fr; } }
+
+  &__gallery { position: sticky; top: 5.5rem; align-self: start; @include mobile { position: static; } }
+  &__main-img { width: 100%; aspect-ratio: 3 / 4.5; object-fit: contain; background: $color-card; padding: $sp-lg; @include mobile { max-width: 13rem; margin: 0 auto; } }
+
+  &__info { min-width: 0; }
+  &__origin-flags { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.625rem; }
+  &__country-tag { font-size: $font-size-xs; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: $color-text-muted; }
+  &__title { font-family: $font-display; font-size: $font-size-3xl; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; line-height: 1.2; margin-bottom: $sp-md; @include mobile { font-size: $font-size-2xl; } }
+  &__rating { display: flex; align-items: center; gap: 0.5rem; margin-bottom: $sp-lg; font-size: $font-size-xs; color: $color-text-muted; &-stars { color: #D4A843; font-size: 0.875rem; } }
+
+  &__specs { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid $color-border; margin-bottom: $sp-lg; @include mobile { grid-template-columns: 1fr; } }
+  &__spec { padding: 0.625rem $sp-md; border-bottom: 1px solid $color-border; @include flex-col; gap: 0.2rem; &:nth-child(odd) { border-right: 1px solid $color-border; } &:nth-last-child(-n+2) { border-bottom: none; } @include mobile { &:nth-child(odd) { border-right: none; } &:nth-last-child(-n+2) { border-bottom: 1px solid $color-border; } &:last-child { border-bottom: none; } } }
+  &__spec-label { @include label-caps; font-size: 0.5625rem; }
+  &__spec-value { font-size: $font-size-sm; font-weight: 600; color: $color-white; }
+
+  &__buy { display: flex; align-items: center; gap: $sp-md; margin-bottom: $sp-xl; flex-wrap: wrap; }
+  &__price { font-family: $font-display; font-size: $font-size-3xl; font-weight: 700; }
+
+  &__qty {
+    display: flex; align-items: center; border: 1px solid $color-border;
+    &-btn { width: 2.25rem; height: 2.25rem; @include flex-center; background: none; border: none; color: $color-white; font-size: $font-size-lg; transition: background $t-fast; &:hover { background: $color-surface; } }
+    &-input { width: 2.5rem; height: 2.25rem; text-align: center; background: none; border: none; border-inline: 1px solid $color-border; color: $color-white; font-size: $font-size-sm; font-weight: 600; -moz-appearance: textfield; &::-webkit-outer-spin-button, &::-webkit-inner-spin-button { appearance: none; } }
+  }
+
+  &__add-btn { @include btn-primary; padding: 0.6875rem 2rem; font-size: $font-size-xs; letter-spacing: 0.12em; }
+
+  &__tabs { display: flex; border-bottom: 1px solid $color-border; margin-bottom: $sp-xl; }
+  &__tab { padding: 0.75rem $sp-lg; font-size: $font-size-sm; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: $color-text-dim; cursor: pointer; border-bottom: 2px solid transparent; transition: color $t-fast, border-color $t-fast; &.is-active { color: $color-white; border-color: $color-red; } &:hover { color: $color-text-muted; } }
+  &__tab-content { display: none; font-size: $font-size-sm; color: $color-text-muted; line-height: 1.9; &.is-active { display: block; } p + p { margin-top: $sp-md; } strong { color: $color-white; } }
+}
+
+// Related products
+.related {
+  background: $color-surface;
+  border-top: 1px solid $color-border;
+  padding: $sp-2xl 0;
+  &__header { @include container; @include flex-between; margin-bottom: $sp-xl; }
+  &__title  { @include heading($font-size-xl); }
+  &__carousel { @include container; }
+  &__track { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: $color-border; border: 1px solid $color-border; @include tablet { grid-template-columns: repeat(3,1fr); } @include mobile { grid-template-columns: repeat(2,1fr); } }
+}

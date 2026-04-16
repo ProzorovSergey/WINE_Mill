@@ -1,0 +1,26 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.footer {
+  background: $color-topbar;
+  border-top: 1px solid $color-border;
+
+  &__main { @include container; padding-top: $sp-xl; padding-bottom: $sp-lg; display: grid; grid-template-columns: repeat(4,1fr); gap: $sp-xl; @include tablet { grid-template-columns: repeat(2,1fr); } @include mobile { grid-template-columns: repeat(2,1fr); gap: $sp-lg; padding-top: $sp-lg; } }
+  &__col-title { @include label-caps; color: $color-white; margin-bottom: $sp-md; }
+  &__nav { @include flex-col; gap: 0.5rem; }
+  &__nav-link { font-size: $font-size-sm; color: $color-text-muted; line-height: 1.5; &:hover { color: $color-white; } }
+
+  &__bottom { @include container; border-top: 1px solid $color-border; padding-top: $sp-md; padding-bottom: $sp-md; @include flex-between; flex-wrap: wrap; gap: $sp-md; @include mobile { flex-direction: column; align-items: flex-start; gap: $sp-sm; } }
+  &__copy    { font-size: $font-size-xs; color: $color-text-dim; }
+
+  &__social { display: flex; align-items: center; gap: $sp-md; }
+  &__social-link {
+    @include flex-center; width: 1.75rem; height: 1.75rem;
+    color: $color-text-muted; border: 1px solid $color-border-light;
+    transition: color $t-fast, border-color $t-fast, background $t-fast;
+    svg { width: 0.875rem; height: 0.875rem; fill: currentColor; stroke: none; }
+    &--outline svg { fill: none; stroke: currentColor; stroke-width: 1.2; }
+    &:hover { color: $color-white; border-color: $color-red; background: $color-red; }
+  }
+  &__legal { font-size: $font-size-xs; color: $color-text-dim; a { color: $color-text-muted; &:hover { color: $color-white; } } }
+}

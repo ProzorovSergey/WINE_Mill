@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Винная мельница — интернет-магазин вина, виски, коньяка и деликатесов. Доставка по Москве." />
+  <title>Винная мельница — вино, виски, коньяк с доставкой</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="topbar"><div class="topbar__inner"><p class="topbar__text">Доступна срочная доставка по Москве&nbsp;&nbsp;·&nbsp;&nbsp;<a href="#">Детальные условия</a></p></div></div>
+<header class="header"><div class="header__main">
+  <a href="index.html" class="header__logo"><img src="img/icons/icon.png" alt="Винная мельница" /></a>
+  <div class="header__search" role="search"><input class="header__search-input" type="search" placeholder="Поиск по сайту..." aria-label="Поиск" /><button class="header__search-btn" type="button" aria-label="Найти"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><line x1="13" y1="13" x2="18" y2="18"/></svg></button></div>
+  <div class="header__meta">
+    <div class="header__auth"><span class="header__auth-label">Личный кабинет</span><a href="#" class="header__auth-link">Регистрация / Вход</a></div>
+    <div class="header__location"><span class="header__location-city">Москва</span><a href="tel:+74956583221" class="header__location-phone">+7 495 658 32 21</a></div>
+    <div class="header__cart"><span class="header__cart-label">Корзина</span><span class="header__cart-total">0 р.</span><div class="header__cart-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg><span class="header__cart-count">0</span></div></div>
+    <button class="header__burger js-burger" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</div></header>
+<nav class="nav js-nav" aria-label="Навигация"><ul class="nav__list">
+  <li><a href="catalog.html" class="nav__link nav__link--active">Вино</a></li>
+  <li><a href="catalog.html" class="nav__link">Игристое</a></li>
+  <li><a href="catalog-whiskey.html" class="nav__link">Виски</a></li>
+  <li><a href="catalog.html" class="nav__link">Коньяк</a></li>
+  <li><a href="catalog.html" class="nav__link">Арманьяк</a></li>
+  <li><a href="catalog.html" class="nav__link">Ром</a></li>
+  <li><a href="catalog.html" class="nav__link">Водка</a></li>
+  <li><a href="catalog.html" class="nav__link">Ликёр</a></li>
+  <li><a href="catalog.html" class="nav__link">Коктейли</a></li>
+  <li><a href="catalog.html" class="nav__link">Деликатесы</a></li>
+</ul></nav>
+<main>
+
+<!-- HERO SLIDER -->
+<section class="hero" aria-label="Специальные предложения">
+  <div class="hero__track js-slider-track">
+    <article class="hero__slide">
+      <div class="hero__slide-left" style="background:#181818">
+        <img src="img/products/offer_bottle.png" alt="Château Pichon Longueville Comtesse de Lalande" loading="eager" style="width:100%;height:100%;object-fit:contain;object-position:center bottom;padding:0.5rem 3rem 0" />
+      </div>
+      <div class="hero__slide-right">
+        <p class="hero__slide-eyebrow">Special offer</p>
+        <h1 class="hero__slide-title">Pichon Longueville<br>Comtesse de Lalande</h1>
+        <a href="product.html" class="hero__slide-cta">Заказать вино</a>
+      </div>
+    </article>
+    <article class="hero__slide">
+      <div class="hero__slide-left">
+        <img class="hero__slide-img" src="img/banners/special_offer_pino.png" alt="Пино Нуар" loading="lazy" />
+      </div>
+      <div class="hero__slide-right hero__slide-right--orange">
+        <p class="hero__slide-eyebrow">Special Offer</p>
+        <h2 class="hero__slide-title">Пино Нуар:<br>Бургундия vs. ЮАР</h2>
+        <a href="catalog.html" class="hero__slide-cta">Узнать больше</a>
+      </div>
+    </article>
+    <article class="hero__slide">
+      <div class="hero__slide-left">
+        <img class="hero__slide-img" src="img/hero/hero_bg.jpg" alt="Коллекция вин" loading="lazy" />
+      </div>
+      <div class="hero__slide-right">
+        <p class="hero__slide-eyebrow">Special offer</p>
+        <h2 class="hero__slide-title">Red Wine<br>Collection 2024</h2>
+        <a href="catalog.html" class="hero__slide-cta">Смотреть каталог</a>
+      </div>
+    </article>
+  </div>
+  <button class="hero__arrow hero__arrow--prev js-slider-prev" aria-label="Предыдущий"><svg viewBox="0 0 16 16" aria-hidden="true"><polyline points="10,3 5,8 10,13"/></svg></button>
+  <button class="hero__arrow hero__arrow--next js-slider-next" aria-label="Следующий"><svg viewBox="0 0 16 16" aria-hidden="true"><polyline points="6,3 11,8 6,13"/></svg></button>
+  <div class="hero__dots js-slider-dots" role="tablist">
+    <button class="hero__dot is-active js-slider-dot" role="tab" aria-selected="true" aria-label="Слайд 1"></button>
+    <button class="hero__dot js-slider-dot" role="tab" aria-selected="false" aria-label="Слайд 2"></button>
+    <button class="hero__dot js-slider-dot" role="tab" aria-selected="false" aria-label="Слайд 3"></button>
+  </div>
+</section>
+
+<!-- PROMO BANNERS -->
+<section class="promo-banners" aria-label="Разделы сайта">
+  <div class="promo-banners__grid">
+    <a href="about.html" class="promo-banners__item"><div class="promo-banners__bg" style="background-image:url('img/banners/banner_2.jpg')"></div><div class="promo-banners__content"><span class="promo-banners__eyebrow">На территории Бордо</span><h3 class="promo-banners__title">Брендирование вин</h3></div></a>
+    <a href="about.html" class="promo-banners__item"><div class="promo-banners__bg" style="background-image:url('img/hero/sommelier.jpg')"></div><div class="promo-banners__content"><span class="promo-banners__eyebrow">Что делает нас особенными</span><h3 class="promo-banners__title">Беседа с сомелье</h3></div></a>
+    <a href="about.html" class="promo-banners__item"><div class="promo-banners__bg" style="background-image:url('img/banners/banner_4.jpg')"></div><div class="promo-banners__content"><span class="promo-banners__eyebrow">С интересными ингредиентами</span><h3 class="promo-banners__title">Фирменные коктейли</h3></div></a>
+  </div>
+</section>
+
+<!-- CATALOG -->
+<section aria-label="Каталог вин">
+  <div class="catalog__layout">
+    <aside class="catalog__sidebar js-filters" aria-label="Фильтры">
+      <div class="filters__group"><div class="filters__header js-filter-header"><span class="filters__title">Цвет</span><span class="filters__toggle"><svg viewBox="0 0 12 12"><line x1="2" y1="6" x2="10" y2="6"/></svg></span></div><div class="filters__body"><label class="filters__option"><span class="filters__option-left"><input class="filters__checkbox" type="checkbox" /><span class="filters__option-label">Белое</span></span><span class="filters__option-count">41</span></label><label class="filters__option"><span class="filters__option-left"><input class="filters__checkbox" type="checkbox" /><span class="filters__option-label">Красное</span></span><span class="filters__option-count">67</span></label><label class="filters__option"><span class="filters__option-left"><input class="filters__checkbox" type="checkbox" /><span class="filters__option-label">Розовое</span></span><span class="filters__option-count">12</span></label><label class="filters__option"><span class="filters__option-left"><input class="filters__checkbox" type="checkbox" /><span class="filters__option-label">Прочее</span></span><span class="filters__option-count">9</span></label></div></div>
+      <div class="filters__group"><div class="filters__header js-filter-header"><span class="filters__title">Сладость</span><span class="filters__toggle"><svg viewBox="0 0 12 12"><line x1="2" y1="6" x2="10" y2="6"/></svg></span></div><div class="filters__body"><label class="filters__option"><span class="filters__option-left"><input class="filters__checkbox" type="checkbox" /><span class="filters__option-label">Брют</span></span><span class="filters__option-count">8</span></label><label class="filters__option"><span class="filters__option-left"><input class="filters__checkbox" type="checkbox" /><span class="filters__option-label">Десертное</span></span><span class="filters__option-count">31</span></label><label class="filters__option"><span class="filters__option-left"><input class="filters__checkbox" type="checkbox" /><span class="filters__option-label">Крепленое</span></span><span class="filters__option-count">13</span></label><label class="filters__option"><span class="filters__option-left"><input class="filters__checkbox" type="checkbox" /><span class="filters__option-label">Полусладкое</span></span><span class="filters__option-count">4</span></label><label class="filters__option"><span class="filters__option-left"><input class="filters__checkbox" type="checkbox" /><span class="filters__option-label">Сухое</span></span><span class="filters__option-count">5</span></label></div></div>
+      <div class="filters__group"><div class="filters__header js-filter-header"><span class="filters__title">Цена</span><span class="filters__toggle"><svg viewBox="0 0 12 12"><line x1="2" y1="6" x2="10" y2="6"/></svg></span></div><div class="filters__body"><div class="filters__price"><input class="filters__price-input" type="number" value="60" min="0" aria-label="От" /><span class="filters__price-sep">до</span><input class="filters__price-input" type="number" value="100" min="0" aria-label="До" /><button class="filters__price-btn" type="button">OK</button></div><label class="filters__option"><span class="filters__option-left"><input class="filters__checkbox" type="checkbox" /><span class="filters__option-label">0–1000</span></span><span class="filters__option-count">9</span></label><label class="filters__option"><span class="filters__option-left"><input class="filters__checkbox" type="checkbox" /><span class="filters__option-label">1000–2000</span></span><span class="filters__option-count">41</span></label><label class="filters__option"><span class="filters__option-left"><input class="filters__checkbox" type="checkbox" /><span class="filters__option-label">2000–3000</span></span><span class="filters__option-count">13</span></label><label class="filters__option"><span class="filters__option-left"><input class="filters__checkbox" type="checkbox" /><span class="filters__option-label">3000–6000</span></span><span class="filters__option-count">9</span></label><label class="filters__option"><span class="filters__option-left"><input class="filters__checkbox" type="checkbox" /><span class="filters__option-label">6000+</span></span><span class="filters__option-count">5</span></label></div></div>
+      <div class="filters__group"><div class="filters__header js-filter-header"><span class="filters__title">Страна</span><span class="filters__toggle"><svg viewBox="0 0 12 12"><line x1="2" y1="6" x2="10" y2="6"/><line x1="6" y1="2" x2="6" y2="10"/></svg></span></div><div class="filters__body is-hidden"></div></div>
+      <div class="filters__group"><div class="filters__header js-filter-header"><span class="filters__title">Регион</span><span class="filters__toggle"><svg viewBox="0 0 12 12"><line x1="2" y1="6" x2="10" y2="6"/><line x1="6" y1="2" x2="6" y2="10"/></svg></span></div><div class="filters__body is-hidden"></div></div>
+      <div class="filters__group"><div class="filters__header js-filter-header"><span class="filters__title">Классификация</span><span class="filters__toggle"><svg viewBox="0 0 12 12"><line x1="2" y1="6" x2="10" y2="6"/><line x1="6" y1="2" x2="6" y2="10"/></svg></span></div><div class="filters__body is-hidden"></div></div>
+      <div class="filters__group"><div class="filters__header js-filter-header"><span class="filters__title">Сорт винограда</span><span class="filters__toggle"><svg viewBox="0 0 12 12"><line x1="2" y1="6" x2="10" y2="6"/><line x1="6" y1="2" x2="6" y2="10"/></svg></span></div><div class="filters__body is-hidden"></div></div>
+    </aside>
+    <div class="catalog__main">
+      <div class="catalog__toolbar">
+        <button class="catalog__filter-toggle js-filter-open" type="button">Фильтры</button>
+        <div class="catalog__sort">
+          <span class="catalog__sort-label">Сортировка:</span>
+          <button class="catalog__sort-btn catalog__sort-btn--active" type="button">Бестселлеры</button>
+          <button class="catalog__sort-btn" type="button">Цена ↑↓</button>
+          <button class="catalog__sort-btn" type="button">Производитель А–Я</button>
+          <button class="catalog__sort-btn" type="button">Винтаж ↑↓</button>
+          <button class="catalog__sort-btn" type="button">Новинки</button>
+          <button class="catalog__sort-btn" type="button">Популярные</button>
+        </div>
+      </div>
+      <div class="catalog__grid" aria-label="Товары">
+        <article class="product-card"><div class="product-card__img-wrap"><img class="product-card__img" src="img/products/bottle_1.png" alt="L'Ermite Hermitage" loading="lazy" /><div class="product-card__overlay" aria-hidden="true"></div><span class="product-card__badge">Новинка</span></div><div class="product-card__body"><span class="product-card__code">30831.75 Р</span><h3 class="product-card__name">L'Ermite Hermitage</h3><div class="product-card__origin"><span class="flag" style="background:linear-gradient(180deg,#0055A4 33%,#fff 33% 66%,#EF4135 66%)"></span>Франция. Шапутье</div><div class="product-card__footer"><span class="product-card__price">90 000 р.</span><a href="product.html" class="product-card__btn">В корзину</a></div></div></article>
+        <article class="product-card"><div class="product-card__img-wrap"><img class="product-card__img" src="img/products/bottle_2.png" alt="Les Greffieux Hermitage" loading="lazy" /><div class="product-card__overlay" aria-hidden="true"></div></div><div class="product-card__body"><span class="product-card__code">30831.75 Р</span><h3 class="product-card__name">Les Greffieux Hermitage</h3><div class="product-card__origin"><span class="flag" style="background:linear-gradient(180deg,#0055A4 33%,#fff 33% 66%,#EF4135 66%)"></span>Франция. Шапутье</div><div class="product-card__footer"><span class="product-card__price">90 000 р.</span><a href="product.html" class="product-card__btn">В корзину</a></div></div></article>
+        <article class="product-card"><div class="product-card__img-wrap"><img class="product-card__img" src="img/products/bottle_3.png" alt="Le Meal Hermitage" loading="lazy" /><div class="product-card__overlay" aria-hidden="true"></div></div><div class="product-card__body"><span class="product-card__code">30831.75 Р</span><h3 class="product-card__name">Le Meal Hermitage</h3><div class="product-card__origin"><span class="flag" style="background:linear-gradient(180deg,#0055A4 33%,#fff 33% 66%,#EF4135 66%)"></span>Франция. Шапутье</div><div class="product-card__footer"><span class="product-card__price">90 000 р.</span><a href="product.html" class="product-card__btn">В корзину</a></div></div></article>
+        <article class="product-card"><div class="product-card__img-wrap"><img class="product-card__img" src="img/products/bottle_4.png" alt="L'Ermite Hermitage" loading="lazy" /><div class="product-card__overlay" aria-hidden="true"></div></div><div class="product-card__body"><span class="product-card__code">30831.75 Р</span><h3 class="product-card__name">L'Ermite Hermitage</h3><div class="product-card__origin"><span class="flag" style="background:linear-gradient(180deg,#0055A4 33%,#fff 33% 66%,#EF4135 66%)"></span>Франция. Шапутье</div><div class="product-card__footer"><span class="product-card__price">90 000 р.</span><a href="product.html" class="product-card__btn">В корзину</a></div></div></article>
+        <article class="product-card"><div class="product-card__img-wrap"><img class="product-card__img" src="img/products/bottle_5.png" alt="Les Greffieux Hermitage" loading="lazy" /><div class="product-card__overlay" aria-hidden="true"></div></div><div class="product-card__body"><span class="product-card__code">30831.75 Р</span><h3 class="product-card__name">Les Greffieux Hermitage</h3><div class="product-card__origin"><span class="flag" style="background:linear-gradient(180deg,#0055A4 33%,#fff 33% 66%,#EF4135 66%)"></span>Франция. Шапутье</div><div class="product-card__footer"><span class="product-card__price">16 500 р.</span><a href="product.html" class="product-card__btn">В корзину</a></div></div></article>
+        <article class="product-card"><div class="product-card__img-wrap"><img class="product-card__img" src="img/products/bottle_6.png" alt="Le Meal Hermitage" loading="lazy" /><div class="product-card__overlay" aria-hidden="true"></div></div><div class="product-card__body"><span class="product-card__code">30831.75 Р</span><h3 class="product-card__name">Le Meal Hermitage</h3><div class="product-card__origin"><span class="flag" style="background:linear-gradient(180deg,#0055A4 33%,#fff 33% 66%,#EF4135 66%)"></span>Франция. Шапутье</div><div class="product-card__footer"><span class="product-card__price">90 000 р.</span><a href="product.html" class="product-card__btn">В корзину</a></div></div></article>
+        <article class="product-card"><div class="product-card__img-wrap"><img class="product-card__img" src="img/products/bottle_7.png" alt="L'Ermite Hermitage" loading="lazy" /><div class="product-card__overlay" aria-hidden="true"></div></div><div class="product-card__body"><span class="product-card__code">30831.75 Р</span><h3 class="product-card__name">L'Ermite Hermitage</h3><div class="product-card__origin"><span class="flag" style="background:linear-gradient(180deg,#0055A4 33%,#fff 33% 66%,#EF4135 66%)"></span>Франция. Шапутье</div><div class="product-card__footer"><span class="product-card__price">90 000 р.</span><a href="product.html" class="product-card__btn">В корзину</a></div></div></article>
+        <article class="product-card"><div class="product-card__img-wrap"><img class="product-card__img" src="img/products/bottle_8.png" alt="Les Greffieux Hermitage" loading="lazy" /><div class="product-card__overlay" aria-hidden="true"></div></div><div class="product-card__body"><span class="product-card__code">30831.75 Р</span><h3 class="product-card__name">Les Greffieux Hermitage</h3><div class="product-card__origin"><span class="flag" style="background:linear-gradient(180deg,#0055A4 33%,#fff 33% 66%,#EF4135 66%)"></span>Франция. Шапутье</div><div class="product-card__footer"><span class="product-card__price">90 000 р.</span><a href="product.html" class="product-card__btn">В корзину</a></div></div></article>
+        <article class="product-card"><div class="product-card__img-wrap"><img class="product-card__img" src="img/products/bottle_1.png" alt="Le Meal Hermitage" loading="lazy" /><div class="product-card__overlay" aria-hidden="true"></div></div><div class="product-card__body"><span class="product-card__code">30831.75 Р</span><h3 class="product-card__name">Le Meal Hermitage</h3><div class="product-card__origin"><span class="flag" style="background:linear-gradient(180deg,#0055A4 33%,#fff 33% 66%,#EF4135 66%)"></span>Франция. Шапутье</div><div class="product-card__footer"><span class="product-card__price">90 000 р.</span><a href="product.html" class="product-card__btn">В корзину</a></div></div></article>
+      </div>
+      <div class="catalog__footer"><a href="catalog.html" class="see-all">Смотреть все</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- SOMMELIER BANNER -->
+<section class="sommelier-banner" aria-label="Консультация сомелье">
+  <div class="sommelier-banner__grid">
+    <div class="sommelier-banner__photo-col"><img class="sommelier-banner__photo" src="img/hero/sommelier.jpg" alt="Сомелье" loading="lazy" /></div>
+    <div class="sommelier-banner__content">
+      <p class="sommelier-banner__eyebrow">Sommelier Choice</p>
+      <h2 class="sommelier-banner__title">Не уверены в выборе?<br>Мы готовы помочь!</h2>
+      <a href="about.html" class="sommelier-banner__cta">Заказать консультацию</a>
+    </div>
+  </div>
+</section>
+<div class="sommelier-text"><div class="sommelier-text__grid"><div class="sommelier-text__col"><p>Благодаря рекомендациям наших опытных кависов, вы сможете не только приобрести ту самую бутылку вина, но и узнать много нового о сочетаниях, подборе гастрономической пары, необходимости декантации, хранения и сервировке.</p><a href="about.html" class="sommelier-text__link">Узнать больше</a></div><div class="sommelier-text__col"><p>Мы с удовольствием поделимся с вами самыми главными винными секретами, а также поможем подобрать идеальные букет и вкус, соответствующие поводу, вашим предпочтениям и статусу.</p></div></div></div>
+
+<!-- NEWSLETTER -->
+<section class="newsletter" aria-label="Email рассылка">
+  <div class="newsletter__inner">
+    <div class="newsletter__form-col"><label class="newsletter__label" for="email-home">Подписаться на email рассылку</label><form class="newsletter__form" novalidate><input class="newsletter__input" type="email" id="email-home" placeholder="Email" autocomplete="email" /><button class="newsletter__submit" type="submit">Отправить</button></form></div>
+    <div class="newsletter__photo-col"><img class="newsletter__photo" src="img/banners/banner_1.jpg" alt="Коллекция вин" loading="lazy" /></div>
+  </div>
+</section>
+</main>
+<footer class="footer"><div class="footer__main"><div class="footer__col"><h4 class="footer__col-title">Shop</h4><nav class="footer__nav"><a href="catalog.html" class="footer__nav-link">Вино</a><a href="catalog.html" class="footer__nav-link">Игристое</a><a href="catalog-whiskey.html" class="footer__nav-link">Крепкое</a><a href="catalog.html" class="footer__nav-link">Деликатесы</a></nav></div><div class="footer__col"><h4 class="footer__col-title">Wine</h4><nav class="footer__nav"><a href="catalog.html" class="footer__nav-link">All Wine</a><a href="catalog.html" class="footer__nav-link">Мансанилья de 30</a></nav></div><div class="footer__col"><h4 class="footer__col-title">The Wines</h4><nav class="footer__nav"><a href="articles.html" class="footer__nav-link">Мансанилья de 30</a><a href="articles.html" class="footer__nav-link">More info</a></nav></div><div class="footer__col"><h4 class="footer__col-title">Wine Tourism</h4><nav class="footer__nav"><a href="articles.html" class="footer__nav-link">Wine tasting news</a><a href="about.html" class="footer__nav-link">More info</a></nav></div></div><div class="footer__bottom"><p class="footer__copy">© 2027 г. ИП «Ла Мельница»</p><div class="footer__social"><a href="#" class="footer__social-link" aria-label="Facebook"><svg viewBox="0 0 16 16"><path d="M9.5 3H11V.5H9C7.07.5 6 1.57 6 3.5V5H4v2.5h2V16h3V7.5h2.5l.5-2.5H9V3.5c0-.28.22-.5.5-.5z"/></svg></a><a href="#" class="footer__social-link footer__social-link--outline" aria-label="Instagram"><svg viewBox="0 0 16 16"><rect x="1" y="1" width="14" height="14" rx="3"/><circle cx="8" cy="8" r="3.5"/></svg></a><a href="#" class="footer__social-link" aria-label="Telegram"><svg viewBox="0 0 16 16"><path d="M14.9 2.6L.7 7.5c-.4.1-.4.6 0 .7l3.7 1.2 1.3 4c.1.4.6.5.9.2l2-1.9 3.8 2.8c.4.3.9 0 1-.4l2.3-10.5c.1-.5-.4-.9-.8-.7z"/></svg></a></div><p class="footer__legal"><a href="#">Privacy policy</a></p></div></footer>
+<script src="js/main.js"></script>
+</body></html>

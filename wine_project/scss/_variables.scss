@@ -1,0 +1,69 @@
+// =============================================
+// VARIABLES — Винная мельница (PDF-aligned)
+// =============================================
+
+// Colors
+$color-bg:            #181818;
+$color-surface:       #1e1e1e;
+$color-card:          #212121;
+$color-card-hover:    #272727;
+$color-topbar:        #0f0f0f;
+$color-header:        #181818;
+$color-nav:           #161616;
+$color-crimson:       #6B1A1A;
+$color-crimson-dark:  #520F0F;
+$color-red:           #C8271D;
+$color-red-hover:     #A81E15;
+$color-orange:        #B84A1A;
+$color-white:         #FFFFFF;
+$color-text:          #FFFFFF;
+$color-text-muted:    #888888;
+$color-text-dim:      #555555;
+$color-border:        #2A2A2A;
+$color-border-light:  #363636;
+
+// Typography
+$font-display: 'Cormorant Garamond', Georgia, serif;
+$font-script:  'Great Vibes', cursive;
+$font-body:    'Montserrat', sans-serif;
+
+$font-size-base: 1rem;
+$font-size-xs:   0.6875rem;
+$font-size-sm:   0.75rem;
+$font-size-md:   0.875rem;
+$font-size-lg:   1.125rem;
+$font-size-xl:   1.375rem;
+$font-size-2xl:  1.75rem;
+$font-size-3xl:  2.25rem;
+
+// Spacing
+$sp-xs:  0.25rem;
+$sp-sm:  0.5rem;
+$sp-md:  1rem;
+$sp-lg:  1.5rem;
+$sp-xl:  2rem;
+$sp-2xl: 3rem;
+$sp-3xl: 4rem;
+
+// Layout
+$container-max: 90rem;
+$container-pad: 1.5rem;
+$header-h:      4.25rem;
+$topbar-h:      2rem;
+
+// Transitions
+$t-fast: 0.15s ease;
+$t-base: 0.25s ease;
+$t-slow: 0.4s ease;
+
+// Breakpoints
+$bp-sm:  640px;
+$bp-md:  768px;
+$bp-lg:  1024px;
+$bp-xl:  1280px;
+$bp-2xl: 1440px;
+
+// Z-index
+$z-sticky:  200;
+$z-overlay: 300;
+$z-modal:   400;
